@@ -15,7 +15,7 @@ service cloud.firestore {
       return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$'); 
     }
     
-    // Check if the user is an admin
+    // Check if the user is an admin (Simplified for prototype: we check if they exist in /admins/)
     function isAdmin() {
       return isSignedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
     }
@@ -40,14 +40,16 @@ service cloud.firestore {
 
     // --- Collections ---
 
-    match /volunteers/{docId} {
-      // Allowed public read for matching in prototype.
+    match /volunteers/{userId} {
+      // For the prototype, we allow public read so the AI can match. 
+      // In a real app, this should be restricted to the clinic admin.
       allow read: if true; 
       
       allow create: if isValidVolunteer(incoming());
       
       allow update: if (
         isValidVolunteer(incoming()) && (
+          // Allow full update if name/details change, as long as it's still valid
           incoming().diff(existing()).affectedKeys().hasOnly(['name', 'specialty', 'location', 'availability'])
         )
       );
@@ -58,6 +60,7 @@ service cloud.firestore {
       allow create: if isValidClinicNeed(incoming());
     }
     
+    // Admins collection (Read-only for the admin themselves)
     match /admins/{userId} {
       allow read: if isSignedIn() && request.auth.uid == userId;
     }

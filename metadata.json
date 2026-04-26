@@ -1,6 +1,6 @@
 {
-  "name": "ClinicConnect",
-  "description": "A community clinic volunteer matching system with AI-powered suggestions, medical license verification, and hour tracking.",
+  "name": "CliniMatch",
+  "description": "High-precision AI volunteer matcher for community healthcare. Features real-time staffing gap analysis and automated resource ranking.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }
