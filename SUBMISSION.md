@@ -24,7 +24,7 @@ By automating the "Consultation-to-Match" workflow, CliniMatch reduces administr
 *   **Visual:** Success message and redirection back to the dashboard.
 
 ### Segment 3: Real-Time AI Matching (1:10 - 2:00)
-*   **Visual:** Back on the **Dashboard**, type a complex request: *"We have a skin clinic emergency in the North District this Thursday. Need a specialist who can handle pediatric dermatology cases."*
+*   **Visual:** Back on the **Dashboard**, type a complex request: *"We have a skin clinic emergency in the North District this Thursday. Need a specialist who can handle dermatology cases."*
 *   **Action:** Click **GENERATE TOP MATCHES**.
 *   **Visual:** Show the loading spinner ("Consulting AI Matcher...").
 *   **Visual:** The ranked cards slide in with high scores (90%+).
