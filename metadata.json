@@ -1,0 +1,6 @@
+{
+  "name": "ClinicConnect",
+  "description": "A community clinic volunteer matching system with AI-powered suggestions, medical license verification, and hour tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

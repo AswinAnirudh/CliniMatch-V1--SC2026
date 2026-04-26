@@ -1,0 +1,36 @@
+{
+  "entities": {
+    "Volunteer": {
+      "title": "Volunteer",
+      "description": "A volunteer registered in the system",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "specialty": { "type": "string" },
+        "location": { "type": "string" },
+        "availability": { "type": "string" }
+      },
+      "required": ["name", "specialty"]
+    },
+    "ClinicNeed": {
+      "title": "Clinic Need",
+      "description": "Requirement for staffing",
+      "type": "object",
+      "properties": {
+        "description": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["description"]
+    }
+  },
+  "firestore": {
+    "volunteers/{userId}": {
+      "schema": "Volunteer",
+      "description": "Volunteer profiles"
+    },
+    "clinicNeeds/{needId}": {
+      "schema": "ClinicNeed",
+      "description": "Stored staffing needs"
+    }
+  }
+}
