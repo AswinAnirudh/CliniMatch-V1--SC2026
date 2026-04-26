@@ -1,23 +1,20 @@
-🏥 CliniMatch: Smart Medical Volunteer Allocation
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Bridging the Gap in Community Care
+# Run and deploy your AI Studio app
 
-CliniMatch is an AI-powered prototype designed to solve the critical staffing gap in community healthcare centers. Under-served clinics often struggle to find specialized medical volunteers for diagnostic camps, leading to delayed patient care. This solution provides a centralized dashboard where coordinators can describe staffing needs in plain natural language, and an AI engine instantly matches them with the right specialists.
+This contains everything you need to run your app locally.
 
-🧠 One Meaningful AI Feature: Smart Resource Allocation
-The core of CliniMatch is a high-precision matching engine powered by Gemini 1.5 Flash.
+View your app in AI Studio: https://ai.studio/apps/63b454ac-dba4-4508-babc-5a8cbdbf6023
 
-Natural Language Reasoning: Unlike traditional keyword searches, the AI understands context, such as mapping a request for a "heart doctor" to a "Cardiologist."
+## Run Locally
 
-
-Structured Decision Making: The engine evaluates medical credentials, proximity, and real-time availability to return a ranked list of volunteers with a "match score" and clear reasoning for each suggestion.
-
-🛠️ Tech Stack
-
-AI Engine: Google AI Studio (Gemini 1.5 Flash) 
+**Prerequisites:**  Node.js
 
 
-Backend/Database: Firebase (Hosting & Firestore) 
-
-
-Frontend: Next.js (React) + Tailwind CSS
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
